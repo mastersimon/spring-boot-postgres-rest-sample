@@ -43,3 +43,13 @@ curl -X "PATCH" "http://localhost:8080/persons/1" \
 	"last_name":"Micheeeeeel"
 }'
 ```
+
+## DELETE a person by id
+```bash
+curl -X "DELETE" "http://localhost:8080/persons/1" \
+	-H "Content-Type: application/json" \
+	-d $'{
+	"first_name":"Simoooon",
+	"last_name":"Micheeeeeel"
+}'
+```

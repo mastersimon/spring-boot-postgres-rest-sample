@@ -46,6 +46,12 @@ public class PersonController {
         return ResponseEntity.ok(person);
     }
 
+    @RequestMapping(value = "/{personId}", method = RequestMethod.DELETE)
+    public ResponseEntity deleteById(@PathVariable final int personId) {
+        personRepository.delete(personId);
+        return ResponseEntity.ok().build();
+    }
+
     @RequestMapping(value = "/{personId}", method = RequestMethod.PATCH)
     public ResponseEntity updatePerson(@PathVariable final int personId, @RequestBody final Person person) {
         final boolean personExists = personRepository.exists(personId);
