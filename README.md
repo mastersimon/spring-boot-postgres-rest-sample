@@ -14,6 +14,14 @@ docker run --name postgres -e POSTGRES_PASSWORD=itblogging -p 5432:5432 -d postg
 
 *Note*: If you are using a Mac with VirtualBox, please keep in mind to add the port **5432** to the port forwarding settings of your virtual machine.
 
+## Start project
+Go to your *spring-boot-postgres-rest-sample* directory and execute:
+```bash
+mvn spring-boot:run
+```
+
+The *import.sql* should be executed during the start process. Now you should have at least one person (default: James Bond) at your database.
+
 ## GET all available persons
 ```bash
 curl -X "GET" "http://localhost:8080/persons"
